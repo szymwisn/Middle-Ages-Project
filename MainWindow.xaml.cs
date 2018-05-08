@@ -20,9 +20,23 @@ namespace MiddleAges
     /// </summary>
     public partial class MainWindow : Window
     {
+        //#################################################
+        // Constructor
+        //#################################################
         public MainWindow()
         {
             InitializeComponent();
+
+            // Objects declaration
+            Resource zasoby = new Resource(5000, 5000, 5000, 5000, 1000);
+
+            // Set all the labels
+            // resources
+            label_GoldValue.Text = zasoby.GoldQuantity.ToString();
+            label_WoodValue.Text = zasoby.WoodQuantity.ToString();
+            label_StoneValue.Text = zasoby.StoneQuantity.ToString();
+            label_IronValue.Text = zasoby.IronQuantity.ToString();
+            label_FoodValue.Text = zasoby.FoodQuantity.ToString();
         }
     }
 }
