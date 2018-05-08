@@ -1,0 +1,466 @@
+﻿<Window x:Class="MiddleAges.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiddleAges"
+        mc:Ignorable="d"
+        Title="Middle Ages The Game" Height="654" Width="974"
+        ResizeMode="NoResize">
+    <Grid Background="#121212">
+        <!-- TOP BAR -->
+        <StackPanel Background="#2a1e06" Height="116" VerticalAlignment="Top" >
+            <Grid Margin="20 10 20 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="58*"/>
+                    <ColumnDefinition Width="23*"/>
+                    <ColumnDefinition Width="35*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Icons -->
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Gold -->
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Gold:" Foreground="White" Height="24"/>
+                        <Image Source="Resources/gold.png" Height="38" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="label_GoldValue" Text="0" Foreground="White" HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="label_GoldIncome" Text="+0 / sec" Foreground="White" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Wood:" Foreground="White" Height="24"/>
+                        <Image Source="Resources/wood.png" Height="38" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="label_WoodValue" Text="0" Foreground="White" HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="label_WoodIncome" Text="+0 / sec" Foreground="White" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Stone:" Foreground="White" Height="24"/>
+                        <Image Source="Resources/stone.png" Height="38" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="label_StoneValue" Text="0" Foreground="White" HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="label_StoneIncome" Text="+0 / sec" Foreground="White" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="3">
+                        <TextBlock Text="Iron:" Foreground="White" Height="24"/>
+                        <Image Source="Resources/iron.png" Height="38" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="label_IronValue" Text="0" Foreground="White" HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="label_IronIncome" Text="+0 / sec" Foreground="White" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="4">
+                        <TextBlock Text="Food:" Foreground="White" Height="24"/>
+                        <Image Source="Resources/food.png" Height="38" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="label_FoodValue" Text="0" Foreground="White" HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="label_FoodIncome" Text="+0 / sec" Foreground="White" HorizontalAlignment="Right"/>
+                    </StackPanel>
+
+                </Grid>
+
+                <!-- Logo -->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="MIDDLE AGES" Foreground="White" FontSize="22" HorizontalAlignment="Center" Margin="10,30,9,0" Padding="3" />
+                    <TextBlock Text="The Game" Foreground="White" FontSize="15" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- People & Credits Button -->
+                <Grid Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="People:" Foreground="White" Height="24"/>
+                        <Image Source="Resources/people.png" Height="38" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="label_peopleValue" Text="0" Foreground="White" HorizontalAlignment="Right"/>
+                        <TextBlock x:Name="label_maxPeopleValue" Text="Limit: 0" Foreground="White" HorizontalAlignment="Right"/>
+
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <Button Content="Credits" x:Name="button_Credits" Height="25" Margin="55,32,20,0"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <!-- Buildings Panel -->
+        <Border BorderThickness="4" BorderBrush="#a17c36" CornerRadius="20" Margin="10,131,409,26" Background="#090909" Padding="20">
+            <StackPanel>
+                <TextBlock Text="Buildings" Foreground="White" HorizontalAlignment="Center"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- left -->
+                    <StackPanel Grid.Column="0">
+                        <!-- Sawmill -->
+                        <StackPanel Grid.Column="0">
+                            <!-- left side image, right rest -->
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <Image Source="Resources/sawmill.png" Height="64"/>
+                                    <TextBlock x:Name="label_SawmillLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Sawmill" Foreground="White" Height="24"/>
+                                    <TextBlock Text="Upgrade cost:" Foreground="White"/>
+
+                                    <!-- grid for cost values -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Gold:" Foreground="White"/>
+                                            <TextBlock x:Name="label_SawmillGoldCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Wood:" Foreground="White"/>
+                                            <TextBlock x:Name="label_SawmillWoodCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="Stone:" Foreground="White"/>
+                                            <TextBlock x:Name="label_SawmillStoneCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_SawmillUpgrade"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Farm -->
+                        <StackPanel Grid.Column="0">
+                            <!-- left side image, right rest -->
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <Image Source="Resources/farm.png" Height="64"/>
+                                    <TextBlock x:Name="label_FarmLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Farm" Foreground="White" Height="24"/>
+                                    <TextBlock Text="Upgrade cost:" Foreground="White"/>
+
+                                    <!-- grid for cost values -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Gold:" Foreground="White"/>
+                                            <TextBlock x:Name="label_FarmGoldCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Wood:" Foreground="White"/>
+                                            <TextBlock x:Name="label_FarmWoodCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="Stone:" Foreground="White"/>
+                                            <TextBlock x:Name="label_FarmStoneCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_FarmUpgrade"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Stone Pit -->
+                        <StackPanel Grid.Column="0">
+                            <!-- left side image, right rest -->
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <Image Source="Resources/stonepit.png" Height="64"/>
+                                    <TextBlock x:Name="label_StonePitLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="StonePit" Foreground="White" Height="24"/>
+                                    <TextBlock Text="Upgrade cost:" Foreground="White"/>
+
+                                    <!-- grid for cost values -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Gold:" Foreground="White"/>
+                                            <TextBlock x:Name="label_StonePitGoldCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Wood:" Foreground="White"/>
+                                            <TextBlock x:Name="label_StonePitWoodCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="Stone:" Foreground="White"/>
+                                            <TextBlock x:Name="label_StonePitStoneCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_StonePitUpgrade"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- right -->
+                    <StackPanel Grid.Column="1">
+                        <!-- IronMine -->
+                        <StackPanel Grid.Column="0">
+                            <!-- left side image, right rest -->
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <Image Source="Resources/ironmine.png" Height="64"/>
+                                    <TextBlock x:Name="label_IronMineLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Iron Mine" Foreground="White" Height="24"/>
+                                    <TextBlock Text="Upgrade cost:" Foreground="White"/>
+
+                                    <!-- grid for cost values -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Gold:" Foreground="White"/>
+                                            <TextBlock x:Name="label_IronMineGoldCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Wood:" Foreground="White"/>
+                                            <TextBlock x:Name="label_IronMineWoodCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="Stone:" Foreground="White"/>
+                                            <TextBlock x:Name="label_IronMineStoneCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_IronMineUpgrade"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Hut -->
+                        <StackPanel Grid.Column="0">
+                            <!-- left side image, right rest -->
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <Image Source="Resources/hut.png" Height="64"/>
+                                    <TextBlock x:Name="label_HutLevel" Text="Level: 0" HorizontalAlignment="Center" Margin="0, 10" Foreground="white"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Hut" Foreground="White" Height="24"/>
+                                    <TextBlock Text="Upgrade cost:" Foreground="White"/>
+
+                                    <!-- grid for cost values -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Gold:" Foreground="White"/>
+                                            <TextBlock x:Name="label_HutGoldCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Wood:" Foreground="White"/>
+                                            <TextBlock x:Name="label_HutWoodCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="Stone:" Foreground="White"/>
+                                            <TextBlock x:Name="label_HutStoneCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_HutUpgrade"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Barracks -->
+                        <StackPanel Grid.Column="0">
+                            <!-- left side image, right rest -->
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <Image Source="Resources/barracks.png" Height="64"/>
+                                    <TextBlock x:Name="label_BarracksPitLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock Text="Barracks" Foreground="White" Height="24"/>
+                                    <TextBlock Text="Upgrade cost:" Foreground="White"/>
+
+                                    <!-- grid for cost values -->
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="Gold:" Foreground="White"/>
+                                            <TextBlock x:Name="label_BarracksGoldCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="Wood:" Foreground="White"/>
+                                            <TextBlock x:Name="label_BarracksWoodCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+
+                                        <StackPanel Grid.Column="2">
+                                            <TextBlock Text="Stone:" Foreground="White"/>
+                                            <TextBlock x:Name="label_BarracksStoneCost" Text="0" Foreground="White"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_BarracksUpgrade"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <!-- Army -->
+        <Border BorderThickness="4" BorderBrush="#a17c36" CornerRadius="20" Margin="576,131,10,222" Background="#090909" Padding="20">
+            <StackPanel Margin="0,0,0,-14">
+                <TextBlock Text="Army" Foreground="White" HorizontalAlignment="Center"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Pikeman-->
+                    <StackPanel Grid.Column="0" Margin="5">
+                        <TextBlock Text="Pikeman" Foreground="White" HorizontalAlignment="Center"/>
+                        <Image Margin="0, 15" Source="Resources/pikeman.png" Height="32"/>
+                        <TextBlock Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_PikemanBuy"/>
+                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_PikemanUpgrade"/>
+                    </StackPanel>
+
+                    <!--Archer-->
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <TextBlock Text="Archer" Foreground="White" HorizontalAlignment="Center"/>
+                        <Image Margin="0, 15" Source="Resources/archer.png" Height="32"/>
+                        <TextBlock Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_ArcherBuy"/>
+                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_ArcherUpgrade"/>
+                    </StackPanel>
+
+                    <!--Horseman-->
+                    <StackPanel Grid.Column="2" Margin="5">
+                        <TextBlock Text="Archer" Foreground="White" HorizontalAlignment="Center"/>
+                        <Image Margin="0, 15" Source="Resources/horseman.png" Height="32"/>
+                        <TextBlock Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_HorsemanBuy"/>
+                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_HorsemanUpgrade"/>
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock x:Name="label_ArmyPower" Text="Army Power: 0" Foreground="white" HorizontalAlignment="Center" Margin="10"/>
+            
+            </StackPanel>
+        </Border>
+
+        <!-- Enemy -->
+        <Border BorderThickness="4" BorderBrush="#a17c36" CornerRadius="20" Margin="576,419,10,26" Background="#090909" Padding="20">
+            <StackPanel Margin="0,0,0,-14">
+                <TextBlock Text="Enemies" Foreground="White" HorizontalAlignment="Center"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <StackPanel Grid.Column="0">
+                        <Image Margin="0, 10" Source="Resources/castle_2.png" Height="64"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1" Margin="0, 10">
+                        <TextBlock x:Name="label_EnemyName" Text="Name: Mieszko" Foreground="White"/>
+                        <TextBlock x:Name="label_EnemyLevel" Text="Level:0" Foreground="White"/>
+                        <TextBlock x:Name="label_EnemyPower" Text="Power: 0" Foreground="White"/>
+                    </StackPanel>
+
+                </Grid>
+                
+                <Button Width="90" Margin="0, 15" Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_EnemyAttack"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
