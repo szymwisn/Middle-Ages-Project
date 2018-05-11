@@ -53,6 +53,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="army_classes\Archer.cs" />
+    <Compile Include="army_classes\Army.cs" />
+    <Compile Include="building_classes\Hut.cs" />
+    <Compile Include="building_classes\Barracks.cs" />
+    <Compile Include="building_classes\Building.cs" />
+    <Compile Include="army_classes\Enemy.cs" />
+    <Compile Include="army_classes\Horseman.cs" />
+    <Compile Include="army_classes\MyArmy.cs" />
+    <Compile Include="army_classes\Pikeman.cs" />
+    <Compile Include="building_classes\Farm.cs" />
+    <Compile Include="building_classes\IronMine.cs" />
+    <Compile Include="building_classes\Sawmill.cs" />
+    <Compile Include="building_classes\StonePit.cs" />
+    <Compile Include="Price.cs" />
+    <Compile Include="Resource.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
