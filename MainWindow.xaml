@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MiddleAges"
         mc:Ignorable="d"
-        Title="Middle Ages The Game" Height="654" Width="974"
-        ResizeMode="NoResize">
+        Title="Middle Ages The Game" Height="654" Width="974" ResizeMode="NoResize">
     <Grid Background="#121212">
         <!-- TOP BAR -->
         <StackPanel Background="#2a1e06" Height="116" VerticalAlignment="Top" >
@@ -86,7 +85,7 @@
 
                     </StackPanel>
                     <StackPanel Grid.Column="1">
-                        <Button Content="Credits" x:Name="button_Credits" Height="25" Margin="55,32,20,0"/>
+                        <Button Content="Credits" x:Name="button_Credits" Height="25" Margin="55,32,20,0" Click="button_Credits_Click"/>
                     </StackPanel>
                 </Grid>
             </Grid>
@@ -146,7 +145,7 @@
                                             <TextBlock x:Name="label_SawmillStoneCost" Text="0" Foreground="White"/>
                                         </StackPanel>
                                     </Grid>
-                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_SawmillUpgrade"/>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_SawmillUpgrade" Click="button_SawmillUpgrade_Click"/>
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
@@ -192,7 +191,7 @@
                                             <TextBlock x:Name="label_FarmStoneCost" Text="0" Foreground="White"/>
                                         </StackPanel>
                                     </Grid>
-                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_FarmUpgrade"/>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_FarmUpgrade" Click="button_FarmUpgrade_Click"/>
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
@@ -238,7 +237,7 @@
                                             <TextBlock x:Name="label_StonePitStoneCost" Text="0" Foreground="White"/>
                                         </StackPanel>
                                     </Grid>
-                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_StonePitUpgrade"/>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_StonePitUpgrade" Click="button_StonePitUpgrade_Click"/>
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
@@ -287,7 +286,7 @@
                                             <TextBlock x:Name="label_IronMineStoneCost" Text="0" Foreground="White"/>
                                         </StackPanel>
                                     </Grid>
-                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_IronMineUpgrade"/>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_IronMineUpgrade" Click="button_IronMineUpgrade_Click"/>
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
@@ -333,7 +332,7 @@
                                             <TextBlock x:Name="label_HutStoneCost" Text="0" Foreground="White"/>
                                         </StackPanel>
                                     </Grid>
-                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_HutUpgrade"/>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_HutUpgrade" Click="button_HutUpgrade_Click"/>
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
@@ -349,7 +348,7 @@
 
                                 <StackPanel Grid.Column="0">
                                     <Image Source="Resources/barracks.png" Height="64"/>
-                                    <TextBlock x:Name="label_BarracksPitLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
+                                    <TextBlock x:Name="label_BarracksLevel" HorizontalAlignment="Center" Margin="0, 10" Text="Level: 0" Foreground="white"/>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1">
@@ -379,7 +378,7 @@
                                             <TextBlock x:Name="label_BarracksStoneCost" Text="0" Foreground="White"/>
                                         </StackPanel>
                                     </Grid>
-                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_BarracksUpgrade"/>
+                                    <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_BarracksUpgrade" HorizontalAlignment="Left" Width="115" Click="button_BarracksUpgrade_Click"/>
                                 </StackPanel>
                             </Grid>
                         </StackPanel>
@@ -404,63 +403,65 @@
                     <StackPanel Grid.Column="0" Margin="5">
                         <TextBlock Text="Pikeman" Foreground="White" HorizontalAlignment="Center"/>
                         <Image Margin="0, 15" Source="Resources/pikeman.png" Height="32"/>
-                        <TextBlock Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
-                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_PikemanBuy"/>
-                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_PikemanUpgrade"/>
+                        <TextBlock x:Name="label_PikemanQuantity" Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="label_PikemanLevel" Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_PikemanBuy" Click="button_PikemanBuy_Click"/>
+                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_PikemanUpgrade" Click="button_PikemanUpgrade_Click"/>
                     </StackPanel>
 
                     <!--Archer-->
                     <StackPanel Grid.Column="1" Margin="5">
                         <TextBlock Text="Archer" Foreground="White" HorizontalAlignment="Center"/>
                         <Image Margin="0, 15" Source="Resources/archer.png" Height="32"/>
-                        <TextBlock Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
-                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_ArcherBuy"/>
-                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_ArcherUpgrade"/>
+                        <TextBlock x:Name="label_ArcherQuantity" Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="label_ArcherLevel" Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_ArcherBuy" Click="button_ArcherBuy_Click"/>
+                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_ArcherUpgrade" Click="button_ArcherUpgrade_Click"/>
                     </StackPanel>
 
                     <!--Horseman-->
                     <StackPanel Grid.Column="2" Margin="5">
-                        <TextBlock Text="Archer" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Horseman" Foreground="White" HorizontalAlignment="Center"/>
                         <Image Margin="0, 15" Source="Resources/horseman.png" Height="32"/>
-                        <TextBlock Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
-                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_HorsemanBuy"/>
-                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_HorsemanUpgrade"/>
+                        <TextBlock x:Name="label_HorsemanQuantity" Text="Quantity: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="label_HorsemanLevel" Text="Level: 0" Foreground="White" HorizontalAlignment="Center"/>
+                        <Button Padding="3" Margin="0, 10" Background="#a17c36" Foreground="White" Content="Buy" x:Name="button_HorsemanBuy" Click="button_HorsemanBuy_Click"/>
+                        <Button Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_HorsemanUpgrade" Click="button_HorsemanUpgrade_Click"/>
                     </StackPanel>
                 </Grid>
 
                 <TextBlock x:Name="label_ArmyPower" Text="Army Power: 0" Foreground="white" HorizontalAlignment="Center" Margin="10"/>
-            
+
             </StackPanel>
         </Border>
 
         <!-- Enemy -->
         <Border BorderThickness="4" BorderBrush="#a17c36" CornerRadius="20" Margin="576,419,10,26" Background="#090909" Padding="20">
             <StackPanel Margin="0,0,0,-14">
-                <TextBlock Text="Enemies" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="label_ArmySection" Text="Enemies" Foreground="White" HorizontalAlignment="Center"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    
+
                     <StackPanel Grid.Column="0">
                         <Image Margin="0, 10" Source="Resources/castle_2.png" Height="64"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="1" Margin="0, 10">
                         <TextBlock x:Name="label_EnemyName" Text="Name: Mieszko" Foreground="White"/>
-                        <TextBlock x:Name="label_EnemyLevel" Text="Level:0" Foreground="White"/>
-                        <TextBlock x:Name="label_EnemyPower" Text="Power: 0" Foreground="White"/>
+                        <TextBlock x:Name="label_EnemyLevel" Foreground="White" Text="Level: 1"/>
+                        <TextBlock x:Name="label_EnemyPower" Foreground="White" Text="Power: 10"/>
                     </StackPanel>
 
                 </Grid>
-                
-                <Button Width="90" Margin="0, 15" Padding="3" Background="#a17c36" Foreground="White" Content="Upgrade" x:Name="button_EnemyAttack"/>
+
+                <Button Width="90" Margin="0, 15" Padding="3" Background="#a17c36" Foreground="White" Content="Attack" x:Name="button_EnemyAttack" Click="button_EnemyAttack_Click"/>
             </StackPanel>
         </Border>
+        <Label Foreground="Gray" Content="Building's images: Forge of Empires" HorizontalAlignment="Left" Margin="335,150,0,0" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="label_Ciekawostka" Foreground="White" Content="Ciekawostka" Margin="10,599,0,0" VerticalAlignment="Top" Width="948" HorizontalAlignment="Center"/>
 
     </Grid>
 </Window>

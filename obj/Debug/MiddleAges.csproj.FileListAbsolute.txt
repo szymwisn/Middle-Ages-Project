@@ -16,7 +16,6 @@ C:\Users\Szymon-LAPTOP\Desktop\C#_implementation\MiddleAges\MiddleAges\obj\Debug
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\bin\Debug\MiddleAges.exe.config
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\bin\Debug\MiddleAges.exe
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\bin\Debug\MiddleAges.pdb
-F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MiddleAges.csprojResolveAssemblyReference.cache
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MainWindow.g.cs
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\App.g.cs
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MiddleAges_MarkupCompile.cache
@@ -28,3 +27,4 @@ F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 -
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MiddleAges.csproj.CoreCompileInputs.cache
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MiddleAges.exe
 F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MiddleAges.pdb
+F:\User Files\Google Drive\szymwisn@gmail.com\PWr\2. semestr\po_projekt\Etap 5 - Implementacja C#\C#_implementation\MiddleAges\MiddleAges\obj\Debug\MiddleAges.csprojAssemblyReference.cache
