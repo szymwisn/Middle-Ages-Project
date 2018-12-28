@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>images/archer.png</file>
+        <file>images/barracks.png</file>
+        <file>images/castle_1.png</file>
+        <file>images/castle_2.png</file>
+        <file>images/castle_3.png</file>
+        <file>images/castle_4.png</file>
+        <file>images/castle_5.png</file>
+        <file>images/coin.png</file>
+        <file>images/farm.png</file>
+        <file>images/food.png</file>
+        <file>images/gold.png</file>
+        <file>images/horseman.png</file>
+        <file>images/iron.png</file>
+        <file>images/ironMine.png</file>
+        <file>images/people.png</file>
+        <file>images/pikeman.png</file>
+        <file>images/R_SS_BronzeAge_Residential2.png</file>
+        <file>images/reward.png</file>
+        <file>images/sawMill.png</file>
+        <file>images/stone.png</file>
+        <file>images/stonePit.png</file>
+        <file>images/wood.png</file>
+    </qresource>
+</RCC>

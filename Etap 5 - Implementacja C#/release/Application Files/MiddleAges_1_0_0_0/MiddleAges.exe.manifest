@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MiddleAges.exe" version="1.0.0.0" publicKeyToken="ea06b67d27d1feb6" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MiddleAges" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MiddleAges.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opcje manifestu UAC
+          Jeśli chcesz zmienić poziom kontroli kont użytkowników w systemie Windows, zastąp węzeł 
+          requestedExecutionLevel jednym z następujących.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Jeśli w celu zapewnienia wstecznej zgodności chcesz użyć wirtualizacji plików i rejestru, 
+         usuń węzeł requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MiddleAges.exe" size="573416">
+      <assemblyIdentity name="MiddleAges" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6gydkEB/8BCWKbaAFWmMIzeommnUzeSFR4QAnSzIjus=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MiddleAges.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-JABJQ1Q\Szymon" issuerKeyHash="fbf12d50bcf71c07664ebf00e1712f675acaef8d" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>mWLNDV/YxPaXHn598j6MvJsUbjk+u8KpVdzNe9SkcKo=</DigestValue></Reference></SignedInfo><SignatureValue>XpCcJzUcN3Y00UPsgct1WssH3W40l66STn/OWFy6MJbW93lZGQXKjBm68kZLeiOj5lfROQY/AUVmttETv49helryhe/k2bNThs8YvooBHncZUVNAyQCWP7ZtBfHNBeFNp9ezKM//UW+bUyero2d263WN5FO+zhP/gMv1Kh0qS1U=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xtvdZmMBfTq/SqrUiBugarV0jUUtnJi9dGihe2j3/Bngj+iFrG3lS4zPX8T0juOL0bu45fUdMVRr6YoEbcFmZIYNkzLLCFI41cuZojVN5q2VeswTgnTku7T8nVfNExm5J29jlwOv2MHoq3q5o3vDkGXmabm2yJ9TDN5VsJS1xQU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="aa70a4d47bcddc55a9c2bb3e396e149bbc8c3ef27d7e1e97f6c4d85f0dcd6299" Description="" Url=""><as:assemblyIdentity name="MiddleAges.exe" version="1.0.0.0" publicKeyToken="ea06b67d27d1feb6" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-JABJQ1Q\Szymon</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>p6c3STsQi01FgwB8KZgz+IX99pGQj+MEgjMFsdPz+Jk=</DigestValue></Reference></SignedInfo><SignatureValue>K8PebVel1quv49Ar8ovOOAqFe4ArHtPfh6McOpD3w+bH5QTQ/ChCMzH9MB4XfAbN0OnLiiA/tO2cP0nXl6vsz7maRWl5pq6TH0oXe2CuYR9hKdeZylDgp2FVfvutW75Rh6/vrFylrrEO/5RCUvTjRbi8Tzy0y47S9rxaaM0eiWE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xtvdZmMBfTq/SqrUiBugarV0jUUtnJi9dGihe2j3/Bngj+iFrG3lS4zPX8T0juOL0bu45fUdMVRr6YoEbcFmZIYNkzLLCFI41cuZojVN5q2VeswTgnTku7T8nVfNExm5J29jlwOv2MHoq3q5o3vDkGXmabm2yJ9TDN5VsJS1xQU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQZ1MGPyhly59NxmRBB9zUmTANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtAEoAQQBCAEoAUQAxAFEAXABTAHoAeQBtAG8AbjAeFw0xODA1MjIxMjQ3NDVaFw0xOTA1MjIxODQ3NDVaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0ASgBBAEIASgBRADEAUQBcAFMAegB5AG0AbwBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDG291mYwF9Or9KqtSIG6BqtXSNRS2cmL10aKF7aPf8GeCP6IWsbeVLjM9fxPSO44vRu7jl9R0xVGvpigRtwWZkhg2TMssIUjjVy5miNU3mrZV6zBOCdOS7tPydV80TGbknb2OXA6/Yweirermje8OQZeZpubbIn1MM3lWwlLXFBQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBACpKM8iwEzeBJ/Ac+gZXharXaxlaMpUck62l1CJfI8WDjhI2eVCGjkEfcz1f2Jl10JTKPOi34ev1eqrYPBna1ATN9YEwjyjvPhsGsN8nsmlDQh9ZSCLABATS44c8uwfm148ouHRj0Vqrhkz91AzSyHLAu4qoL0RxK2qGsjGcE+1c</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
